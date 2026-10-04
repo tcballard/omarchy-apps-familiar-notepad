@@ -59,3 +59,11 @@ The empty `tcballard/omarchy-apps-familiar-notepad` repository was initialized w
 Import review fixed two edge cases: recovery is disabled in read-only windows so a draft cannot be consumed into an unsaveable buffer, and CLI option detection stops at `--`, so filenames such as `--help` open normally. `--help-all` also works without a display. The final CMake build and CTest suite passed again (10 Qt Test results). A subprocess probe confirmed the option-like filename starts a GUI and remains open until the test terminates it; display-free `--help-all` exited 0.
 
 Mechanical preflight uses Git whitespace checks, file/mode inventory and Node content checks rather than the skill’s Python helper, in accordance with the no-Python requirement. Hosted CI results are recorded on the pull request and Actions run; live Omarchy acceptance remains outstanding.
+
+## UI taste pass (4 October 2026)
+
+Applied the previously downloaded Uizze ui-taste 0.2.0 polish/craft playbooks. The fresh npx retrieval failed with an invalid skill/archive response; the existing complete local skill was used.
+
+The document header is now a compact filename/status strip, with icon-and-label tools and explicit saved/unsaved/read-only/busy states. The editor has a toggleable line-number margin that follows scrolling, wrapping and font changes. Find/replace uses a grid with Previous/Next controls; filename paths remain available as tooltips. Palette changes repaint toolbar icons. No storage or CLI behavior changed.
+
+The Release build and offscreen CTest suite passed with 11 Qt Test results. The new case checks gutter toggling, zoom, wrapping, cursor line and text preservation. Current screenshots were captured from the updated implementation at 1120×760, 800×600 (including find/replace), 640×760 with dirty text, and 150% scale. They supersede the initial captures; SCREENSHOTS-SHA256SUMS identifies their bytes. Native desktop acceptance remains not run.

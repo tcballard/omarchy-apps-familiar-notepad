@@ -20,6 +20,7 @@ public:
     bool openSucceeded() const {return opened_;}
 protected:
     void closeEvent(QCloseEvent *event) override;
+    void changeEvent(QEvent *event) override;
 private:
     Editor *editor_;
     QLabel *heading_, *location_, *position_, *format_, *notice_;
