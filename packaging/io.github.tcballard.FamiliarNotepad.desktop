@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Familiar Notepad
+GenericName=Text Editor
+Comment=A little space for plain text
+Exec=familiar-notepad %f
+Icon=io.github.tcballard.FamiliarNotepad
+Terminal=false
+Categories=Utility;TextEditor;
+MimeType=text/plain;
+StartupNotify=true
+StartupWMClass=io.github.tcballard.FamiliarNotepad
+Keywords=Text;Notes;Editor;Notepad;

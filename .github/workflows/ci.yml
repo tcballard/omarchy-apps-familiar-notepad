@@ -1,0 +1,20 @@
+name: Build and test
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  linux:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y cmake ninja-build qt6-base-dev desktop-file-utils
+      - run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+      - run: cmake --build build --parallel 2
+      - run: QT_QPA_PLATFORM=offscreen ctest --test-dir build --output-on-failure
+      - run: desktop-file-validate packaging/io.github.tcballard.FamiliarNotepad.desktop
+      - run: ./build/familiar-notepad --inspect examples/welcome.txt
+      - run: ./scripts/package-preview.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: familiar-notepad-preview-linux-x86_64
+          path: dist/*.tar.gz
