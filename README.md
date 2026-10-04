@@ -29,12 +29,12 @@ The installer puts the executable, app launcher entry and icon under `~/.local`.
 
 - New, open, save and save as, with prompts for unsaved changes.
 - Undo/redo, cut/copy/paste, find next/previous and replace all as one undo operation.
-- Case-sensitive and whole-word search, line/column navigation, word wrap, font and zoom controls.
+- Case-sensitive and whole-word search, line/column navigation, optional line numbers, word wrap, font and zoom controls.
 - UTF-8, UTF-8 BOM and BOM-marked UTF-16 LE/BE; LF, CRLF and CR line endings. The status bar shows the current format; change it through Format.
 - Atomic saves, file-change checks and private recovery drafts. Recover interrupted work through File → Recover drafts.
 - Dark, theme-aware controls around a fixed warm paper surface. Omarchy's current `colors.toml` is checked every 2.5 seconds; there is a built-in fallback palette.
 
-One document per window. Launch another process for another file. This preview has no tabs, printing, rich text, syntax highlighting, line-number gutter or single-instance routing.
+One document per window. Launch another process for another file. This preview has no tabs, printing, rich text, syntax highlighting or single-instance routing.
 
 ## Terminal and agent use
 
