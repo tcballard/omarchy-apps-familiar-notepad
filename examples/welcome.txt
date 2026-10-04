@@ -1,0 +1,30 @@
+Welcome to Familiar Notepad.
+
+A little space for plain text.
+────────────────────────────────────────────────────
+
+For the note you need to jot down.
+The config you want to check.
+The idea that won't wait for a new project.
+
+Open a file. Make a change. Save it where it belongs.
+
+
+FAMILIAR KEYS
+
+Ctrl+N       A fresh page
+Ctrl+O       Open a file
+Ctrl+S       Save your changes
+Ctrl+F       Find that thing you wrote
+Ctrl+H       Replace it
+Ctrl+G       Jump to a line
+
+
+FROM YOUR TERMINAL
+
+familiar-notepad notes.txt --line 12
+familiar-notepad --read-only settings.conf
+familiar-notepad --inspect notes.txt
+
+
+Local files. Native controls. No account.
